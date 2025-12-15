@@ -1,0 +1,29 @@
+[
+  {
+    "id": "880e8400-e29b-41d4-a716-446655440000",
+    "user_id": "550e8400-e29b-41d4-a716-446655440001",
+    "video_id": "770e8400-e29b-41d4-a716-446655440000",
+    "parent_id": null,
+    "text": "Great tutorial! Very easy to follow",
+    "date": "2025-12-11T10:00:00Z",
+    "is_deleted": false
+  },
+  {
+    "id": "880e8400-e29b-41d4-a716-446655440001",
+    "user_id": "550e8400-e29b-41d4-a716-446655440000",
+    "video_id": "770e8400-e29b-41d4-a716-446655440000",
+    "parent_id": "880e8400-e29b-41d4-a716-446655440000",
+    "text": "Thanks! I'm glad you liked it",
+    "date": "2025-12-11T12:30:00Z",
+    "is_deleted": false
+  },
+  {
+    "id": "880e8400-e29b-41d4-a716-446655440002",
+    "user_id": "550e8400-e29b-41d4-a716-446655440001",
+    "video_id": "770e8400-e29b-41d4-a716-446655440002",
+    "parent_id": null,
+    "text": "Best speedrun I've seen!",
+    "date": "2025-12-13T20:00:00Z",
+    "is_deleted": false
+  }
+]

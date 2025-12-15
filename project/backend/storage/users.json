@@ -1,0 +1,26 @@
+[
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440000",
+    "name": "Katya",
+    "email": "katya@example.com",
+    "birth": "2000-05-10",
+    "role": "user",
+    "registered_at": "2025-12-15T12:00:00Z",
+    "user_link": "katya-4f8j2k",
+    "logo_loc": "/avatars/550e8400-e29b-41d4-a716-446655440000.png",
+    "password_hash": "$2b$12$abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOP",
+    "is_deleted": false
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440001",
+    "name": "Tanya",
+    "email": "tanya@example.com",
+    "birth": "2001-08-20",
+    "role": "user",
+    "registered_at": "2025-12-14T10:30:00Z",
+    "user_link": "tanya-7j9x3m",
+    "logo_loc": "/avatars/550e8400-e29b-41d4-a716-446655440001.png",
+    "password_hash": "$2b$12$abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOP",
+    "is_deleted": false
+  }
+]

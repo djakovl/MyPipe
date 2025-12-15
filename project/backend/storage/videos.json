@@ -1,0 +1,67 @@
+[
+  {
+    "id": "770e8400-e29b-41d4-a716-446655440000",
+    "user_id": "550e8400-e29b-41d4-a716-446655440000",
+    "name": "React Tutorial for Beginners",
+    "description": "A comprehensive guide to learning React from scratch",
+    "date": "2025-12-10T14:30:00Z",
+    "likes": 150,
+    "dislikes": 5,
+    "views": 2340,
+    "is_public": true,
+    "is_deleted": false,
+    "category_id": "660e8400-e29b-41d4-a716-446655440002"
+  },
+  {
+    "id": "770e8400-e29b-41d4-a716-446655440001",
+    "user_id": "550e8400-e29b-41d4-a716-446655440000",
+    "name": "Python Web Development",
+    "description": "Building web apps with FastAPI and Vue.js",
+    "date": "2025-12-12T10:15:00Z",
+    "likes": 89,
+    "dislikes": 2,
+    "views": 1205,
+    "is_public": true,
+    "is_deleted": false,
+    "category_id": "660e8400-e29b-41d4-a716-446655440002"
+  },
+  {
+    "id": "770e8400-e29b-41d4-a716-446655440002",
+    "user_id": "550e8400-e29b-41d4-a716-446655440001",
+    "name": "Elden Ring Speedrun",
+    "description": "Attempting to beat Elden Ring in 2 hours",
+    "date": "2025-12-13T16:45:00Z",
+    "likes": 234,
+    "dislikes": 8,
+    "views": 5678,
+    "is_public": true,
+    "is_deleted": false,
+    "category_id": "660e8400-e29b-41d4-a716-446655440001"
+  },
+  {
+    "id": "770e8400-e29b-41d4-a716-446655440003",
+    "user_id": "550e8400-e29b-41d4-a716-446655440001",
+    "name": "My Weekend Vlog",
+    "description": "Just hanging out and exploring the city",
+    "date": "2025-12-14T12:00:00Z",
+    "likes": 45,
+    "dislikes": 1,
+    "views": 567,
+    "is_public": true,
+    "is_deleted": false,
+    "category_id": "660e8400-e29b-41d4-a716-446655440004"
+  },
+  {
+    "id": "770e8400-e29b-41d4-a716-446655440004",
+    "user_id": "550e8400-e29b-41d4-a716-446655440000",
+    "name": "Music Production Basics",
+    "description": "How to make beats with FL Studio",
+    "date": "2025-12-15T09:20:00Z",
+    "likes": 123,
+    "dislikes": 3,
+    "views": 3456,
+    "is_public": true,
+    "is_deleted": false,
+    "category_id": "660e8400-e29b-41d4-a716-446655440000"
+  }
+]
