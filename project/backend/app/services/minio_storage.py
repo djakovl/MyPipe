@@ -1,5 +1,3 @@
-
-
 from minio import Minio
 from minio.error import S3Error
 import os
@@ -162,8 +160,8 @@ class MinIOStorage:
     
     def get_presigned_url(
         self,
-        bucket_name: str,
-        object_name: str,
+        bucket_name: str,   # videos
+        object_name: str,   # video_id.mp4
         expiration: int = 3600,
     ) -> Optional[str]:
         try:
