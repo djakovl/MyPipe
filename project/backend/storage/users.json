@@ -8,7 +8,7 @@
     "registered_at": "2025-12-15T12:00:00Z",
     "user_link": "katya-4f8j2k",
     "logo_loc": "/avatars/550e8400-e29b-41d4-a716-446655440000.png",
-    "password_hash": "$2b$12$abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOP",
+    "password_hash": "$3365186566757675969",
     "is_deleted": false
   },
   {
@@ -20,7 +20,7 @@
     "registered_at": "2025-12-14T10:30:00Z",
     "user_link": "tanya-7j9x3m",
     "logo_loc": "/avatars/550e8400-e29b-41d4-a716-446655440001.png",
-    "password_hash": "$2b$12$abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOP",
+    "password_hash": "$3696955188016981410",
     "is_deleted": false
   }
 ]
