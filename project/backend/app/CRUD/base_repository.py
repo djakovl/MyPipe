@@ -44,6 +44,10 @@ class BaseJsonRepository:
                 return item
         return None
     
+    def get_not_deleted(self) -> List[Dict[str, Any]]:
+        data = self._read_data()
+        return [item for item in data if not item.get('is_deleted', False)]
+
     def create(self, item: Dict[str, Any]) -> Dict[str, Any]:
         data = self._read_data()
         data.append(item)
@@ -67,7 +71,3 @@ class BaseJsonRepository:
                 self._write_data(data)
                 return True
         return False
-    
-    def get_not_deleted(self) -> List[Dict[str, Any]]:
-        data = self._read_data()
-        return [item for item in data if not item.get('is_deleted', False)]

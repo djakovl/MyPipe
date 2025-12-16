@@ -70,12 +70,6 @@ class CategoryResponse(BaseModel):
     id: str
     name: str
 
-
-#Tokens
-class TokenResponse(BaseModel):
-    access_token: str
-    token_type: str = "bearer"
-
 #Response
 class SuccessResponse(BaseModel):
     success: bool
