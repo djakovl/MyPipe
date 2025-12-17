@@ -9,6 +9,7 @@ date = datetime.now(UTC).isoformat()
 
 
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 #from app.services.minio_storage import MinIOStorage
 from .services.minio_storage import MinIOStorage
 
@@ -23,6 +24,20 @@ class CommentCreate(BaseModel):
 
 
 app = FastAPI()
+
+origins = [
+    "http://localhost",
+    "http://localhost:80",
+    "http://localhost:3000",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,      # можно ["*"] на время разработки
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # ---------------- PATHS ----------------
 
