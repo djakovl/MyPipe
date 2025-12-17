@@ -2,17 +2,14 @@
 <template>
   <header class="header">
     <div class="header-content">
-      <router-link to="/" class="logo">YouTube Clone</router-link>
+      <router-link to="/" class="logo">SiriusTube</router-link>
 
       <div class="search-bar">
         <input type="text" placeholder="Поиск..." v-model="searchQuery" @keyup.enter="search" />
         <button @click="search">🔍</button>
       </div>
 
-      <div class="nav-icons">
-        <router-link to="/upload" title="Загрузить">📹</router-link>
-        <router-link to="/profile" title="Аккаунт">👤</router-link>
-      </div>
+      
     </div>
   </header>
 </template>
@@ -60,7 +57,7 @@ export default {
   font-size: 20px;
   font-weight: bold;
   text-decoration: none;
-  color: #ff0000;
+  color: #119fb8;
 }
 .search-bar {
   display: flex;
