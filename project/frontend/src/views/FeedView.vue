@@ -51,7 +51,7 @@ export default {
         loading.value = true
         error.value = null
 
-        const res = await fetch('http://localhost:8000/api/videos')
+        const res = await fetch('/api/videos')
         if (!res.ok) throw new Error('Не удалось загрузить видео')
         //videos.value = await res.json()
       } catch (err) {

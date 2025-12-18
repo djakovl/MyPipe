@@ -86,18 +86,15 @@ export default {
         loading.value = true
 
         // 1. Получить данные видео
-        const videoRes = await fetch(`http://localhost:8000/api/videos/${videoId}`)
+        const videoRes = await fetch(`/api/videos/${videoId}`)
         if (!videoRes.ok) throw new Error('Видео не найдено')
         currentVideo.value = await videoRes.json()
 
         // 2. Получить ссылку на видеофайл
-        const linkRes = await fetch(`http://localhost:8000/api/videos/${videoId}/get_link`)
+        const linkRes = await fetch(`/api/videos/${videoId}/get_link`)
         if (!linkRes.ok) throw new Error('Ссылка на видео недоступна')
         const { link } = await linkRes.json()
-        videoSrc.value = `http://localhost:8000${link}`
-
-        // 3. Увеличить просмотры
-        await fetch(`http://localhost:8000/api/videos/${videoId}/views`, { method: 'POST' })
+        videoSrc.value = `${link}`
 
         // 4. Загрузить комментарии
         await fetchComments()
@@ -112,13 +109,13 @@ export default {
     const fetchComments = async () => {
       try {
         loadingComments.value = true
-        const res = await fetch(`http://localhost:8000/api/videos/${videoId}/comments`)
+        const res = await fetch(`/api/videos/${videoId}/comments`)
         comments.value = await res.json()
 
         // Загрузить пользователей
         const userIds = [...new Set(comments.value.map(c => c.user_id))]
         if (userIds.length > 0) {
-          const usersRes = await fetch(`http://localhost:8000/api/users/batch?ids=${userIds.join(',')}`)
+          const usersRes = await fetch(`/api/users/batch?ids=${userIds.join(',')}`)
           users.value = await usersRes.json()
         }
       } catch (err) {
@@ -132,7 +129,7 @@ export default {
     const like = async () => {
       if (!currentVideo.value || loading.value) return
       try {
-        const res = await fetch(`http://localhost:8000/api/videos/${videoId}/likes`, { method: 'POST' })
+        const res = await fetch(`/api/videos/${videoId}/likes`, { method: 'POST' })
         const updated = await res.json()
         currentVideo.value.likes = updated.likes
       } catch (err) {
@@ -143,7 +140,7 @@ export default {
     const dislike = async () => {
       if (!currentVideo.value || loading.value) return
       try {
-        const res = await fetch(`http://localhost:8000/api/videos/${videoId}/dislikes`, { method: 'POST' })
+        const res = await fetch(`/api/videos/${videoId}/dislikes`, { method: 'POST' })
         const updated = await res.json()
         currentVideo.value.dislikes = updated.dislikes
       } catch (err) {
@@ -162,7 +159,7 @@ export default {
           parent_id: null // можно сделать ответом
         }
 
-        const res = await fetch(`http://localhost:8000/api/videos/${videoId}/comments`, {
+        const res = await fetch(`/api/videos/${videoId}/comments`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload)

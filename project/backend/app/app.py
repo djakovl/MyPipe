@@ -93,7 +93,7 @@ def get_video_link(video_id: str):
     """
     try:
         url = minio_client.get_presigned_url(
-            bucket_name="videos",
+            bucket_name="video",
             object_name=f"{video_id}.mp4",
             expiration=3600
         )
