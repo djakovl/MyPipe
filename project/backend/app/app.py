@@ -6,7 +6,7 @@ from datetime import datetime, UTC, timezone
 
 date = datetime.now(UTC).isoformat()
 
-
+from app.services.recommendations import get_trending_videos, get_all_categories_with_top_videos
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
@@ -60,10 +60,21 @@ def root():
 
 
 @app.get("/api/videos")
-def get_videos():
+def get_videos(include_recommendations: bool = False, top_per_category: int = 3):
     try:
         with open(VIDEOS_FILE, "r", encoding="utf-8") as f:
-            return json.load(f)
+            videos = json.load(f)
+        
+        # Если фронт запросил рекомендации, добавляем их
+        if include_recommendations:
+            recommendations = get_all_categories_with_top_videos(videos, top_per_category)
+            return {
+                "all_videos": videos,
+                "recommendations": recommendations
+            }
+        
+        return videos
+    
     except FileNotFoundError:
         raise HTTPException(404, "videos.json не найден")
     except Exception as e:
