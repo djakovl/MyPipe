@@ -9,7 +9,7 @@
         <button @click="search">🔍</button>
       </div>
 
-      
+     
     </div>
   </header>
 </template>
@@ -57,7 +57,7 @@ export default {
   font-size: 20px;
   font-weight: bold;
   text-decoration: none;
-  color: #119fb8;
+  color: #91caff;
 }
 .search-bar {
   display: flex;

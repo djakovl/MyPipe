@@ -99,9 +99,6 @@ def get_video(video_id: str):
 
 @app.get("/api/video/{video_id}/get_link")
 def get_video_link(video_id: str):
-    """
-    Возвращает presigned URL на видео из MinIO
-    """
     try:
         url = minio_client.get_presigned_url(
             bucket_name="video",
@@ -112,10 +109,14 @@ def get_video_link(video_id: str):
         if not url:
             raise HTTPException(500, "Не удалось получить ссылку")
 
-        return {"video_url": url}
+        # Переписываем host minio -> localhost, чтобы ссылка работала из браузера
+        external_url = url.replace("http://minio:9000", "http://localhost:9000")
+
+        return {"video_url": external_url}
 
     except Exception as e:
-        raise HTTPException(500, str(e))
+        raise HTTPException(500, f"MinIO error: {repr(e)}")
+
 
 
 @app.get("/api/video/{video_id}/comments")

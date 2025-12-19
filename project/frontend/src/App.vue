@@ -24,7 +24,7 @@ export default {
 }
 body {
   font-family: Arial, sans-serif;
-  background: #ffffff;
+  background: #f9f9f9;
 }
 #app {
   min-height: 100vh;
