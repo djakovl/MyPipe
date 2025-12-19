@@ -1,7 +1,7 @@
 <!-- src/views/HomeView.vue -->
 <template>
   <div class="home">
-    <h1>Добро пожаловать на YouTube Clone!</h1>
+    <h1>Добро пожаловать на SiriusTube!</h1>
     <router-link to="/feed">Перейти к ленте</router-link>
   </div>
 </template>
@@ -15,7 +15,7 @@
   display: inline-block;
   margin-top: 20px;
   padding: 10px 20px;
-  background: #ff0000;
+  background: #91caff;
   color: white;
   text-decoration: none;
   border-radius: 4px;

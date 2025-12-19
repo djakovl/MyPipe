@@ -12,7 +12,7 @@ class MinIOStorage:
     
     def __init__(
         self,
-        endpoint: str = "localhost:9000",
+        endpoint: str = "minio:9000",
         access_key: str = "minioadmin",
         secret_key: str = "minioadmin",
         secure: bool = False,
